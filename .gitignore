@@ -1,0 +1,5 @@
+env/
+hentai/
+
+*.pyc
+debug.log
