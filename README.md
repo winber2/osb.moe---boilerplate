@@ -1,23 +1,25 @@
+# osb.moe boilerplate
+
+Basically just testing things with docker, and setting up boilerplate for osb.moe react.
+
 ## Setting up the environment
 
 run `./setup.sh`
 
-This should pip install dependencies as well as setup the postrges database on port `5432`
+This should pip install dependencies as well as setup the postrges database on port `5432`. In order to run the django application, you will need to migrate the default django migrations:
 
-In order to run locally, you will need to migrate the default django migrations:
+- `python3 manage.py makemigrations`
+- `python3 manage.py migrate`
 
-`python3 manage.py makemigrations`
-`python3 manage.py migrate`
+Then collect the static files needed for certain django apps to run:
 
-Then collect the static files needed to certain django apps to run:
-
-`python3 manage.py collectstatic`
+- `python3 manage.py collectstatic`
 
 ## Deploying Locally
 
 Make sure you have docker, then run:
 
-`./deploy.sh`
+- `./deploy.sh`
 
 This should deploy a docker container as an exposed server, which you can access by going to `localhost`
 
