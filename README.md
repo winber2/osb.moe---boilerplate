@@ -6,7 +6,12 @@ Basically just testing things with docker, and setting up boilerplate for osb.mo
 
 run `./setup.sh`
 
-This should pip install dependencies as well as setup the postrges database on port `5432`. In order to run the django application, you will need to migrate the default django migrations:
+This should pip install dependencies as well as setup the postrges database on port `5432`. An `env` folder should have been created in the setup. Enter the environment and install django dependencies by running:
+
+`. env/bin/activate`
+`sudo pip3 install -r requirements.txt`
+
+In order to run the django application, you will need to migrate the default django migrations:
 
 - `python3 manage.py makemigrations`
 - `python3 manage.py migrate`
