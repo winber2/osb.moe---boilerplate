@@ -1,5 +1,7 @@
 env/
 hentai/
+static/admin
+static/rest_framework
 
 *.pyc
 debug.log
