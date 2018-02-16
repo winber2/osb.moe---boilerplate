@@ -2,6 +2,7 @@ env/
 hentai/
 static/admin
 static/rest_framework
+osb.moe/node_modules/
 
 *.pyc
 debug.log

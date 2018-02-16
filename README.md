@@ -33,3 +33,13 @@ This should deploy a docker container as an exposed server, which you can access
 Deploying with docker basically mimics production, which runs NGINX and gunicorn on top of the django application.
 
 You can alternatively just run `python3 manage.py runserver` to run a local django server on port `8000` without NGINX or gunicorn.
+
+## Developing
+
+This application uses React and Django. Django will be purely used for API's and the majority of the application will be frontend developing in React. While having one of the backends running (either using `python manage.py runserver` or using the docker deployment), you can start a local frontend serving server using webpack-dev-server:
+
+`cd osb.moe`
+`npm install` to install node depencies if needed
+`npm run start` to start up the webpack-dev-server
+
+You will then be able to see the frontend served at `localhost:3000`. Changes inside the osb.moe folder will update immediately in your browser, so it makes for faster React development.
