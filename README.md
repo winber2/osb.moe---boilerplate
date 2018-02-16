@@ -8,8 +8,8 @@ run `./setup.sh`
 
 This should pip install dependencies as well as setup the postrges database on port `5432`. An `env` folder should have been created in the setup. Enter the environment and install django dependencies by running:
 
-`. env/bin/activate`
-`sudo pip3 install -r requirements.txt`
+- `. env/bin/activate`
+- `sudo pip3 install -r requirements.txt`
 
 In order to run the django application, you will need to migrate the default django migrations:
 
@@ -38,8 +38,8 @@ You can alternatively just run `python3 manage.py runserver` to run a local djan
 
 This application uses React and Django. Django will be purely used for API's and the majority of the application will be frontend developing in React. While having one of the backends running (either using `python manage.py runserver` or using the docker deployment), you can start a local frontend serving server using webpack-dev-server:
 
-`cd osb.moe`
-`npm install` to install node depencies if needed
-`npm run start` to start up the webpack-dev-server
+- `cd osb.moe`
+- `npm install` to install node dependencies if needed
+- `npm run start` to start up the webpack-dev-server
 
 You will then be able to see the frontend served at `localhost:3000`. Changes inside the osb.moe folder will update immediately in your browser, so it makes for faster React development.
