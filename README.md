@@ -4,21 +4,13 @@ Basically just testing things with docker, and setting up boilerplate for osb.mo
 
 ## Setting up the environment
 
-run `./setup.sh`
+run `. setup.sh`
 
-This should pip install dependencies as well as setup the postrges database on port `5432`. An `env` folder should have been created in the setup. Enter the environment and install django dependencies by running:
+This should pip install dependencies as well as setup the postrges database on port `5432`. An `env` folder should have also been created in the setup. The setup should automatically install python requirements and run default django migrations.
 
-- `. env/bin/activate`
-- `sudo pip3 install -r requirements.txt`
+Any time you want to run django and python-related commands, you should do so inside the osb.moe virtual env:
 
-In order to run the django application, you will need to migrate the default django migrations:
-
-- `python3 manage.py makemigrations`
-- `python3 manage.py migrate`
-
-Then collect the static files needed for certain django apps to run:
-
-- `python3 manage.py collectstatic`
+`. env/bin/activate`
 
 ## Deploying Locally
 
